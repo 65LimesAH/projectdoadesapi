@@ -1,0 +1,67 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",  // @typescript-eslint/eslint-plugin
+    "plugin:eslint-comments/recommended",     // eslint-plugin-eslint-comments
+    "plugin:promise/recommended",             // eslint-plugin-promise
+    "plugin:unicorn/recommended",             // eslint-plugin-unicorn
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",                     // @typescript-eslint/eslint-plugin
+    "eslint-comments",                        // eslint-plugin-eslint-comments
+    "promise",                                // eslint-plugin-promise
+    "unicorn" ,                               // eslint-plugin-unicorn
+    "prettier"                                // eslint-plugin-prettier
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-debugger": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "no-console": "off",
+    "no-shadow": "off",
+    "lines-between-class-members": "off",
+    "class-methods-use-this": "off",
+    "no-prototype-builtins": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/no-null": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "camelCase": true,
+          "pascalCase": true
+        }
+      }
+    ],
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
+    "@typescript-eslint/no-explicit-an": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-use-before-define": ["error", {
+      "functions": false,
+      "classes": true,
+      "variables": true,
+      "typedefs": true
+    }],
+    "quotes": ["error", "single", {
+      "allowTemplateLiterals": true
+    }]
+  }
+}
